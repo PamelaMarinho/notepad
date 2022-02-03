@@ -1,0 +1,20 @@
+<%- include('../../layouts/header.ejs',{title: 'Notepad | criar nota'}) %>
+<main class="main">
+
+    <section class="section update-section">
+
+        <form  class="form update-form" action='/notepad/<%= idser%>/newNote' method="post">
+            <input class="form-item titulo-item" type="text" id="titulo" maxlength="19" name= "titulo" placeholder="Informe o titulo da nota...">
+            <input class="form-item" maxlength="19" type="text" id="tipo" name= "tipo" placeholder="Informe o grupo...">
+            <textarea class="form-item form-textarea" maxlength="255" type="text" id="nota" name= "nota" placeholder="Crie sua nota..."></textarea>
+            <button class="form-item" type="submit">criar</button>
+            <a class="form-item item-cancela" href="/notepad/<%=idser%>">cancelar</a>
+        </form>
+
+    </section>
+
+    <div class="circuloVerde"></div>
+
+</main>
+
+<%- include('../../layouts/footer.ejs') %>

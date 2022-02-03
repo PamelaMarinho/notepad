@@ -1,0 +1,19 @@
+<%- include('../../layouts/header.ejs',{title:'notepad | criando conta'}) %>
+<main class="main">
+
+    <div class="section update-section">
+
+        <form class="form" action='/user' method="post">
+            <input class="form-item" type="text" id="nome" name= "nome" placeholder="Informe um login...">
+            <input class="form-item" type="text" id="email" name= "email" placeholder="Informe um email...">
+            <input class="form-item" type="text" id="senha" name= "senha" placeholder="Crie uma senha com 8 caracteres...">
+            <button class="form-item" type="submit">Criar conta</button>
+            <a class="form-item item-cancela" href="/">Cancela</a>
+        </form>
+
+    </div>
+
+</main>
+
+
+<%- include('../../layouts/footer.ejs') %>

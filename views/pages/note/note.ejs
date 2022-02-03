@@ -1,0 +1,35 @@
+<%- include('../../layouts/header.ejs',{title:'Notepad'}) %>
+    <body>
+
+
+<main class="note-main">
+    
+<% if (notepad) { %>
+
+        <div class="note-notepad">
+            <% notepad.forEach(note=>{ %>
+                <div class="note-box">
+                    <span class="note-box-titulo" ><%=note.titulo%></span>
+                    <span class="note-tipo"><%=note.tipo%></span>
+                    <div class="note-textarea" ><%=note.nota.slice(0,50)%>. . .</div>
+                    <a class="note-a-delete" href="/notepad/<%= note.id%>/delete">Deletar</a>
+                    <a class="note-a-update" href="/notepad/<%= note.id%>/update">Editar</a>
+                 </div>
+
+               
+             <% }) %>
+             
+        </div>
+        
+
+<% }else{ %>
+    <h1 class="h1-noteNull">Não há notas</h1>
+<% } %>
+
+</main>
+<div class="circuloVerde"></div>
+<div class="note-arco-button">
+    <a href="/notepad/<%=notepad[0].idser%>/newNote"><h2>+</h2></a>
+</div>
+</body>
+<%- include('../../layouts/footer.ejs') %> 

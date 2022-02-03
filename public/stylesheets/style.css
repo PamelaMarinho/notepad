@@ -1,0 +1,295 @@
+/********* ITEMS EM COMUM ***********/
+*{
+    margin: 0;
+    margin: auto;
+    text-decoration: none;
+    border: none;
+    color: black;
+    outline-style: initial;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: girl;
+}
+@font-face {
+    font-family: girl;
+    src: url('/fonts/joelhoB.ttf');
+}
+
+.form-item{
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px;
+    font-size: 20px;
+    padding-left: 10px;
+    resize: none;
+    margin: 20px;
+    width: 90%;
+    height: 15%; 
+}
+
+.form>input{
+    background-color: rgba(32, 178, 171, 0.308);
+    color: black;
+}
+
+input::placeholder{
+    color: rgba(0, 0, 0, 0.719);
+}
+
+.form>button{
+    background-color: rgba(255, 255, 255, 0.015);
+    color: lightseagreen;
+    text-align: center;
+}
+
+.form>button:hover{
+    background-color: rgba(255, 255, 255, 0.178);
+    border: solid 1px rgb(58, 58, 58);  
+    box-shadow: none;
+}
+
+.index-imagem>img,.alteraNote-main,
+.index-imagem,.newUser-main,.aviso,
+.main-erro{
+    height: 100vh;
+    width: 100vw;
+}
+
+/********* INDEX **********/
+.main{
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+}
+
+.section{
+    display: flex;
+    flex-flow: column;
+    height: 50%;
+    width: 40%;
+    background-color: rgba(133, 133, 133, 0.268);
+    border: solid 1px rgb(58, 58, 58);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.form{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+/* *********NEW USER********* */
+
+.form>a{
+   color: rgb(207, 60, 60);
+}
+
+/********* NOTES PAGE **********/
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.circuloVerde{      
+    height:15vw;
+    width: 15vw;
+    border-radius: 100px;
+    background-color: rgb(32, 178, 171);
+    filter: blur(4vw);
+    position: absolute;
+    z-index: -1;
+    left: 50vw;
+    top: 20px;
+    animation:  circulo 20s linear 0s infinite alternate running;
+}
+
+@keyframes circulo{
+    0%{top: 10vh;}
+    25%{left: 10vw;}
+    50%{top: 60vh}
+    75%{left:60vw}
+    100%{top: 10vh;}
+}
+.note-notepad{
+    display: flex;
+    flex-flow: column wrap;
+    overflow-x: hidden;
+    background-color: rgba(133, 133, 133, 0.178);
+    width: 90vw;
+    border-radius: 50px;
+    box-sizing: content-box;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: solid 1px rgb(145, 145, 145);
+}
+.note-box{
+    display: grid;
+    grid-template-columns: 20% 20% 39% 10% 10%;
+    height: 80px;
+    width: 100%;
+    border: solid 0.5px rgb(100, 100, 100);
+    background-color: rgba(160, 160, 160, 0.363);
+    text-align: center;
+}
+
+.note-box:hover{
+    background-color: rgba(255, 255, 255, 0.063);
+}
+.note-box>a{
+    color: rgb(106, 190, 235);
+}
+
+.note-arco-button{
+    position: fixed;
+    left: 90%;
+    top: 85%;
+    height: 100px;
+    width: 100px; 
+    background-color: lightseagreen;
+    border-radius: 100px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    transition: background 1s, height 1s, width 1s,left 1s,top 1s ;
+}
+
+/******* NEW NOTE PAGE ********/
+
+.update-form>input::placeholder{
+    color: rgba(32, 178, 171, 0.57);
+}
+
+/************ ALTERA PAGE **************/
+
+.update-form>input{
+    background-color: rgba(255, 255, 255, 0);
+    margin: 5px;
+    padding: 5px;
+    color: lightseagreen;
+    box-shadow: none;
+}
+
+.form-textarea{
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.342);
+
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.item-cancela{
+    border: none;
+    box-shadow: none;
+    text-align: center;
+    height: fit-content;
+    margin-top: 0;
+}
+.update-section{
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.083);
+}
+
+
+/************ AVISO **************/
+.circuloErro{
+    background-color: rgb(160, 57, 57);
+}
+
+.aviso-box{
+    font-size: 20px;
+    text-align: center;
+}
+.section-aviso{
+    height: 30%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.541);
+}
+/************ @MEDIA **************/
+
+@media only screen and (min-width: 200px) and (max-width: 767px){
+
+    .note-box-titulo{grid-area: titulo;}
+    .note-tipo{grid-area: tipo;}
+    .note-textarea{grid-area: nota;}
+    .note-a-delete{grid-area: delete;}
+    .note-a-update{grid-area: update;}
+    .note-box{
+        font-size: 15px;
+        height: 15%;
+        width: 100%;
+        padding: 20px;
+        grid-template-areas: 
+                "titulo titulo titulo . update"
+                "tipo tipo tipo . ."
+                "nota nota nota . delete";
+    }
+    .note-arco-button{
+        left: 80%;
+        top: 90%;
+    }
+    .section{
+        height: 80vh;
+        width: 80vw;
+    }
+    .section-aviso{
+        height: 30%;
+    }
+
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .note-box{
+        font-size: 15px;
+        height: 10vh;
+    }
+    .section{
+        width: 60vw;
+    }
+    .note-box>span,.note-box>div{
+        color: rgb(219, 252, 252);
+    }
+    .note-arco-button{
+        left: 80%;
+        top: 90%;
+    }
+}
+@media only screen and (min-width:1025px) and (max-width: 1440px){
+    .note-box{
+        font-size: 18px;
+        height: 15vh;
+    }
+    .note-box>span,.note-box>div{
+        color: rgb(219, 252, 252);
+    }
+    .note-arco-button{
+        left: 85%;
+        top: 80%;
+    }
+}
+@media only screen and (min-width:1440px) and (max-width: 2000px){
+    .note-box{
+        font-size: 20px;
+        height: 15vh;
+    }
+    .note-notepad{
+        width: 80vw;
+    }
+    .note-box>span,.note-box>div{
+        color: rgb(219, 252, 252);
+    }
+    .note-arco-button{
+        left: 89%;
+        top: 90%;
+    }
+}
+@media only screen and (min-width:2000px) and (max-width: 2777px){
+    .note-arco-button{
+        left: 92%;
+        top: 85%;
+    }
+}

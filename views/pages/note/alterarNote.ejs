@@ -1,0 +1,20 @@
+<%- include('../../layouts/header.ejs',{title:'Notepad | alteração'}) %>
+<main class="main">
+
+    <section class="section update-section">
+
+        <form class="form update-form" action="/notepad/<%= note.id%>/update" method="post">
+            <input class="form-item titulo-item" type="text" maxlength="19" id="titulo" name= "titulo" value="<%=note.titulo%>">
+            <input class="form-item" type="text" maxlength="19" id="tipo" name= "tipo" value="<%=note.tipo%>">
+            <textarea class="form-item form-textarea" maxlength="255" name= "nota" value=<%=note.nota%>><%=note.nota%></textarea>
+            <button class="form-item" type="submit">alterar</button>
+            <a class="form-item item-cancela" href="/notepad/<%=note.idser%>">cancelar</a>
+        </form>
+
+    </section>
+
+    <div class="circuloVerde"></div>
+
+</main>
+
+<%- include('../../layouts/footer.ejs') %>                                  
