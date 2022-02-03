@@ -4,4 +4,4 @@ Projeto Notepad 📓 foi desenvolvido com <strong>Javascript, Node, Express, MyS
 
 Após cadastrar um usuário e senha é possível criar, alterar e deletar notas.
 
-![alt notes page](https://j.gifs.com/99YBXP.gif)
+<img src="https://j.gifs.com/99YBXP.gif" width="200" height="100" />
