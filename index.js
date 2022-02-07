@@ -14,9 +14,9 @@ app.set('view engine','ejs')
 app.use('/user',routerUser)
 app.use('/notepad', note)
 app.use('/',root)
+const port = process.env.PORT || 3000
 
-
-app.listen(3322, ()=>{
-    console.log('servidor escutando na porta 3333')
+app.listen(port, ()=>{
+    console.info(`servidor escutando na porta ${port}`)
 })
 
