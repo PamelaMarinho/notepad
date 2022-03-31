@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "205778",
-    "database": "notacao",
-    "host": "127.0.0.1",
+    "username": "bfa343016fdef7",
+    "password": "575f9dee",
+    "database": "heroku_a8640eaaaa86511",
+    "host": "us-cdbr-east-05.cleardb.net",
     "dialect": "mysql"
   },
   "test": {
